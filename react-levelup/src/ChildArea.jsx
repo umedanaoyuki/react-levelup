@@ -8,7 +8,7 @@ const style = {
 };
 
   
-export const ChildArea = memo(({open}) => {
+export const ChildArea = memo(({open, onClickClose}) => {
 
   console.log("ChildAreaがレンダリングされた");
 
@@ -16,12 +16,14 @@ export const ChildArea = memo(({open}) => {
   data.forEach(() => {
     console.log("...");
   });
-  
-
 
   return (
     <>
-      {open ? (<div style={style}><p>子コンポーネント</p></div>) : null}
+      {open ? (
+        <div style={style}>
+          <p>子コンポーネント</p>
+          <button onClick={onClickClose}>閉じる</button>
+          </div>) : null}
     </>
   );
 });
