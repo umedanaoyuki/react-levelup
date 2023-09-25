@@ -1,4 +1,6 @@
 
+import { memo } from "react"; 
+
 const style = {
   width: "100%",
   height: "200px",
@@ -6,7 +8,7 @@ const style = {
 };
 
   
-export const ChildArea = ({open}) => {
+export const ChildArea = memo(({open}) => {
 
   console.log("ChildAreaがレンダリングされた");
 
@@ -22,4 +24,4 @@ export const ChildArea = ({open}) => {
       {open ? (<div style={style}><p>子コンポーネント</p></div>) : null}
     </>
   );
-};
+});
