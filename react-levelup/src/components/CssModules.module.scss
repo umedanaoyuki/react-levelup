@@ -7,3 +7,20 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.title {
+  margin: 0;
+  color: #3d84a8;
+}
+
+.button {
+  background-color: #abedd8;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  &:hover {
+    background-color: lightgreen;
+    color: white;
+    cursor: pointer;
+  }
+}
